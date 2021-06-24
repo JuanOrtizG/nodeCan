@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang"en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IEedge">
+    <meta name="viewport" content="widthdevice-width, initial-scale1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id ="lista" class="list-group list-group-flush">
+        <li class="list-group-item active">Lista de PIDs soportados</li>
+        
+      </ul>
+    <script >
+        let listapid = [
+"00 PIDs supported [01 - 20]",
+ "01 Monitor status since DTCs cleared",
+ "02 Freeze DTC",
+ "03 Fuel system status",
+ "04 Calculated engine load",
+ "05 Engine coolant temperature",
+ "06 Short term fuel trim — Bank 1",
+ "07 Long term fuel trim — Bank 1",
+ "08 Short term fuel trim — Bank 2",
+ "09 Long term fuel trim — Bank 2",
+ "0a Fuel pressure",
+ "0b Intake manifold absolute pressure",
+ "0c Engine RPM",
+ "0d Vehicle speed",
+ "0e Timing advance",
+ "0f Intake air temperature",
+ "10 MAF air flow rate",
+ "11 Throttle position",
+ "12 Commanded secondary air status",
+ "13 Oxygen sensors present (in 2 banks)",
+ "14 Oxygen Sensor 1 - Short term fuel trim",
+ "15 Oxygen Sensor 2 - Short term fuel trim",
+ "16 Oxygen Sensor 3 - Short term fuel trim",
+ "17 Oxygen Sensor 4 - Short term fuel trim",
+ "18 Oxygen Sensor 5 - Short term fuel trim",
+ "19 Oxygen Sensor 6 - Short term fuel trim",
+ "1a Oxygen Sensor 7 - Short term fuel trim",
+ "1b Oxygen Sensor 8 - Short term fuel trim",
+ "1c OBD standards this vehicle conforms to",
+ "1d Oxygen sensors present (in 4 banks)",
+ "1e Auxiliary input status",
+ "1f Run time since engine start",
+ "20 PIDs supported [21 - 40]",
+ "21 Distance traveled with malfunction indicator lamp (MIL) on",
+ "22 Fuel Rail Pressure (relative to manifold vacuum)",
+ "23 Fuel Rail Gauge Pressure (diesel, or gasoline direct injection)",
+ "24 Oxygen Sensor 1 - Fuel–Air Equivalence Ratio",
+ "25 Oxygen Sensor 2 - Fuel–Air Equivalence Ratio",
+ "26 Oxygen Sensor 3 - Fuel–Air Equivalence Ratio",
+ "27 Oxygen Sensor 4 - Fuel–Air Equivalence Ratio",
+ "28 Oxygen Sensor 5 - Fuel–Air Equivalence Ratio",
+ "29 Oxygen Sensor 6 - Fuel–Air Equivalence Ratio",
+ "2a Oxygen Sensor 7 - Fuel–Air Equivalence Ratio",
+ "2b Oxygen Sensor 8 - Fuel–Air Equivalence Ratio",
+ "2c Commanded EGR",
+ "2d EGR Error",
+ "2e Commanded evaporative purge",
+ "2f Fuel Tank Level Input",
+ "30 Warm-ups since codes cleared",
+ "31 Distance traveled since codes cleared",
+ "32 Evap. System Vapor Pressure",
+ "33 Absolute Barometric Pressure",
+ "34 Oxygen Sensor 1 - Fuel–Air Equivalence Ratio",
+ "35 Oxygen Sensor 2 - Fuel–Air Equivalence Ratio",
+ "36 Oxygen Sensor 3 - Fuel–Air Equivalence Ratio",
+ "37 Oxygen Sensor 4 - Fuel–Air Equivalence Ratio",
+ "38 Oxygen Sensor 5 - Fuel–Air Equivalence Ratio",
+ "39 Oxygen Sensor 6 - Fuel–Air Equivalence Ratio",
+ "3a Oxygen Sensor 7 - Fuel–Air Equivalence Ratio",
+ "3b Oxygen Sensor 8 - Fuel–Air Equivalence Ratio",
+ "3c Catalyst Temperature: Bank 1, Sensor 1",
+ "3d Catalyst Temperature: Bank 2, Sensor 1",
+ "3e Catalyst Temperature: Bank 1, Sensor 2",
+ "3f Catalyst Temperature: Bank 2, Sensor 2",
+ "40 PIDs supported [41 - 60]",
+ "41 Monitor status this drive cycle",
+ "42 Control module voltage",
+ "43 Absolute load value",
+ "44 Fuel–Air commanded equivalence ratio",
+ "45 Relative throttle position",
+ "46 Ambient air temperature",
+ "47 Absolute throttle position B",
+ "48 Absolute throttle position C",
+ "49 Absolute throttle position D",
+ "4a Absolute throttle position E",
+ "4b Absolute throttle position F",
+ "4c Commanded throttle actuator",
+ "4d Time run with MIL on",
+ "4e Time since trouble codes cleared",
+ "4f Maximum value for Fuel–Air equivalence ratio, oxygen sensor voltage, oxygen sensor current, and intake manifold absolute pressure",
+ "50 Maximum value for air flow rate from mass air flow sensor",
+ "51 Fuel Type",
+ "52 Ethanol fuel percentage",
+ "53 Absolute Evap system Vapor Pressure",
+ "54 Evap system vapor pressure",
+ "55 Short term secondary oxygen sensor trim",
+ "56 Long term secondary oxygen sensor trim",
+ "57 Short term secondary oxygen sensor trim",
+ "58 Long term secondary oxygen sensor trim",
+ "59 Fuel rail absolute pressure",
+ "5a Relative accelerator pedal position",
+ "5b Hybrid battery pack remaining life",
+ "5c Engine oil temperature",
+ "5d Fuel injection timing",
+ "5e Engine fuel rate",
+ "5f Emission requirements to which vehicle is designed",
+ ] //FIN DE LA LISTA PID
+
+ document.write(`<h2> ${listapid.length} </h2>`)
+
+ let A = 11
+ let B = 23
+ let C = 45
+ let D = 23
+
+ let binario =""
+ let lista_trama = [11,23,45,23]
+
+ lista_trama.forEach(element => {
+   binario += parseInt(element,16).toString(2)
+ });
+
+ console.log(binario)
+
+ let cnt = 0
+
+ while (cnt<binario.length){
+    
+    if (binario[cnt]=="1"){
+        console.log(listapid[cnt])
+        
+        let ul = document.querySelector('#lista')
+        let li = document.createElement('li')
+
+        li.innerHTML=`${listapid[cnt]}`
+        li.className="list-group-item"
+        ul.appendChild(li)
+        
+    }
+
+    cnt++
+ }
+
+ //CREANDO NUEVOS ELEMENTOS
+
+ 
+for(x=0;x<5;x++){
+    let p = document.createElement("p")
+ 
+ let texto = document.createTextNode("hola mundo!")
+
+    p.appendChild(texto)
+ document.body.appendChild(p)
+}
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+    </script>
+</body>
+</html>

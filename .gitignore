@@ -1,0 +1,5 @@
+src/plugins
+src/dist
+src/flot
+node_modules/
+package-lock.json
