@@ -23,9 +23,6 @@
   <link rel="stylesheet" href="css/style.css">
   
 </head>
-
-
-
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
   <!-- Navbar -->
@@ -59,9 +56,9 @@
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link"> <!--Universidad Nacional de Asunción--></a>
+        <a href="#" class="nav-link">Universidad Nacional de Asunción</a>
       </li>
-      <!-- <img src="img/fiuna.png" alt="">-->
+      <img src="img/fiuna.png" alt="">
     </ul>
   </nav>
   
@@ -70,7 +67,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link">
+    <a href="main.html" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">App Web</span>
@@ -93,37 +90,54 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview "> <!-- menu-open-->
-            <a href="#" class="nav-link active "><!--active-->
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Opciones
+                J 1939
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="index.html" class="nav-link active">
+                <a href="j1939-cuentapgn.html" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Portada</p>
+                  <p>Frecuencia de Paquetes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-pid-soporte.html" class="nav-link">
+                <a href="j1939-escucha.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>OBDII</p>
+                  <p>Escucha</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="j1939-escucha.html" class="nav-link">
+                <a href="j1939-velocidad.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>J1939</p>
+                  <p>Velocidad</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>RPM</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nivel de Combustible</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Temperatura de Motor </p>
                 </a>
               </li>
             </ul>
           </li>
 
-          
           
          
           
@@ -135,7 +149,6 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -145,38 +158,47 @@
             <h1 class="m-0 text-dark"> <!--Dashboard v2--></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
-            
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="main.html">Home</a></li>
+              <li class="breadcrumb-item active">J 1939</li>
+            </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-  
+   
  
     <!-- Main content -->
     <section class="content">
+      <div class="container-fluid row">
+                
+                  
+                
+                  <div class="card col-sm-12">
+                    <div class="card-body body-monitor row" style="margin-left: 1em">
+                     <!-- textarea-->
+                    <textarea class=" col-sm-5 form-control" name="comando" id="textarea" cols="30" rows="10"></textarea>
+                     <!--espacio-->
+                    <div class="col-sm-1"></div>
+                     <!-- Botones-->
+                      <div class=" col-sm-6 info-box">
+                        <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text">Formato del comando hexadecimal J1939</span>
+                          <span id ="panel" class="display-3 text-center info-box-number">PGN</span>
+                          <input id="entrada" class="mb-2"type="text">
+                          <button id="btn-activar"type="button" class="mb-2 btn btn-success">Activar</button>
+                          <button id="btn-desactivar" type="button" class="btn btn-secondary" >Borrar</button>
+                        </div> <!-- /.info-box-content -->
+                      </div>
+                    
+                  </div> <!-- /.card-body -->    
+                  </div> <!-- /.card -->
 
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          Comunicación OBD2
-        </div>
-        <div class="card-body caratula">
-          <h1>UNIVERSIDAD NACIONAL DE ASUNCIÓN</h1>
-          <h2>Facultad de Ingeniería</h2>
-          <h3>Ingeniería Electrónica</h3>
-          <img src="img/fiuna.png" style="height: 150px;" alt="">
-          <h4> Comunicación OBD2 y J1939</h4>
-        </div>
-        <!-- /.card-body -->
-        
-      </div>
-      <!-- /.card -->
-
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+      </div>   <!--/. container-fluid -->
+    </section>  <!-- /.content -->
+  </div> <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -195,6 +217,9 @@
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+<!-- SOCKET-->
+<script src="/socket.io/socket.io.js"></script>
+
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
@@ -204,13 +229,17 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 
-
 <!-- OPTIONAL SCRIPTS -->
-
-<!-- 
 <script src="dist/js/demo.js"></script>
--->
+
+<!-- PAGE PLUGINS -->
+<!-- PAGE SCRIPTS -->
+<script src="dist/js/pages/dashboard2.js"></script>
+
+<!-- PACKAGE GOOGLE CHART JS-->
 
 
+<script src="j1939-escucha-dev.js"></script>
+  
 </body>
 </html>
