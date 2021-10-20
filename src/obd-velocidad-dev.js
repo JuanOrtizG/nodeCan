@@ -67,7 +67,10 @@ var opts = {
     console.log("emitimos: " + senal)
       socket.emit('message', senal)
   })
-  
+  //INICIALIZAMOS EL PANEL 
+  gauge.set(0);
+  panel.innerHTML=0;
+
   socket.on('lectura',(data)=>{
     console.log(data)
     gauge.set(data.valor)

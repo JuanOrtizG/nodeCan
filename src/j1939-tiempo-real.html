@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -94,51 +95,45 @@
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                J 1939
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="obd-pid-soporte.html" class="nav-link ">
+                <a href="j1939-cuentapgn.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Soportes PIDs</p>
+                  <p>Frecuencia de Paquetes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-comando.html" class="nav-link">
+                <a href="j1939-escucha.html" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Consulta PID</p>
+                  <p>Escucha</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-rpm.html" class="nav-link">
+                <a href="j1939-velocidad.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>revoluciones</p>
+                  <p>Velocidad</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-bateria.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>batería</p>
+                  <p>RPM</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-temp-oil-motor.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Temperatura </p>
+                  <p>Nivel de Combustible</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-velocidad.html" class="nav-link active">
+                <a href="j1939-dashboard.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>velocidad </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="obd-nivelCombustible.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Combustible </p>
+                  <p>Dashboard</p>
                 </a>
               </li>
             </ul>
@@ -166,7 +161,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="main.html">Home</a></li>
-              <li class="breadcrumb-item active">OBDII</li>
+              <li class="breadcrumb-item active">J 1939</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -180,40 +175,40 @@
       <div class="container-fluid row">
                 
                   
-                   <!-- Default google Gauge -->
+                
                   <div class="card col-sm-12">
                     <div class="card-body body-monitor row" style="margin-left: 1em">
-                    <!--AQUI EMPIEZA TU CODIGO ROMU-->
-                    
-                    <canvas class="col-sm-6"id="foo"></canvas>
-                    
-                      <div class=" col-sm-6 info-box">
-                        <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
-                        
+                   
+                     <!--espacio-->
+                    <div class="col-sm-1"></div>
+                     <!-- Botones-->
+                      <div class=" col-sm-4 info-box">
                         
                         <div class="info-box-content">
-                          <span class="info-box-text">Velocidad   [ Km/h ]</span>
-                          <span id ="panel" class="display-3 text-center info-box-number">000</span> 
+                          <span class="info-box-text">Datos J1939</span>
+                         
                           <button id="btn-activar"type="button" class="mb-2 btn btn-success">Activar</button>
-                          <button id="btn-desactivar" type="button" class="btn btn-secondary" >Desactivar</button>
-                        </div>
-                        <!-- /.info-box-content -->
+                          <button id="btn-desactivar" type="button" class="btn btn-secondary" >Borrar</button>
+                        </div> <!-- /.info-box-content -->
                       </div>
                     
                   </div> <!-- /.card-body -->    
                   </div> <!-- /.card -->
-                 
-               
-                    
-                 
-               
-                
-      </div>
-      <!--/. container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+
+
+
+                  <div class="card col-sm-12">
+                      <div class="card-body " width="100px" height="100px">
+                        <!-- CHART -->
+                       
+                        <canvas id="myChart" width="400px" height="400px"></canvas>
+
+                      </div>
+                  </div>
+
+      </div>   <!--/. container-fluid -->
+    </section>  <!-- /.content -->
+  </div> <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -239,6 +234,8 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
@@ -253,8 +250,10 @@
 
 <!-- PACKAGE GOOGLE CHART JS-->
 
-<script src="import-lib-gauge.js"></script>
-<script src="obd-velocidad-dev.js"></script>
+<script src="plugins/chart.js/Chart.min.js"></script>
+<script  src="j1939-tiempo-real-dev.js"></script>
+
+
   
 </body>
 </html>

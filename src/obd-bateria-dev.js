@@ -40,7 +40,7 @@ var opts = {
   btn_activar.addEventListener('click', (event)=>{
     event.preventDefault()
     console.log("click")
-    let senal = "i5ety"
+    let senal = "i42ty"
     //AL HACER CLICK -> EMITIMOS la  SOCKET el codigo para leer datos rpm
     console.log("emitimos: " + senal)
       socket.emit('message', senal)

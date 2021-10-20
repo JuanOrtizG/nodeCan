@@ -68,6 +68,11 @@ var opts = {
       socket.emit('message', senal)
   })
   
+
+  //INICIALIZAMOS EL PANEL 
+  gauge.set(0);
+  panel.innerHTML=0;
+  
   socket.on('lectura',(data)=>{
     console.log(data)
     conversionDecimal = parseInt(data.valor, 16);

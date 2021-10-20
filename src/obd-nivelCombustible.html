@@ -124,19 +124,19 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-temp-oil-motor.html" class="nav-link">
+                <a href="obd-temp-oil-motor.html" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Temperatura </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-velocidad.html" class="nav-link active">
+                <a href="obd-velocidad.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>velocidad </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="obd-nivelCombustible.html" class="nav-link">
+                <a href="obd-nivelCombustible.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Combustible </p>
                 </a>
@@ -183,17 +183,23 @@
                    <!-- Default google Gauge -->
                   <div class="card col-sm-12">
                     <div class="card-body body-monitor row" style="margin-left: 1em">
-                    <!--AQUI EMPIEZA TU CODIGO ROMU-->
                     
-                    <canvas class="col-sm-6"id="foo"></canvas>
-                    
+                      <!-- Elemento para espacio blanco-->
+                      <div class="col-sm-2"></div>
+                      <!--Elemento gauge de termometro-->
+                    <div id="elemento_gauge" class="col-sm-3">
+                      <canvas id="draw"></canvas>
+                    </div>
+
+                    <!-- BOTONES DE ACCION-->
                       <div class=" col-sm-6 info-box">
+                        <!--
                         <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
-                        
+                        -->
                         
                         <div class="info-box-content">
-                          <span class="info-box-text">Velocidad   [ Km/h ]</span>
-                          <span id ="panel" class="display-3 text-center info-box-number">000</span> 
+                          <span class="info-box-text">Nivel de Combustible [%]</span>
+                          <span id ="panel" class="display-3 text-center info-box-number">000</span>
                           <button id="btn-activar"type="button" class="mb-2 btn btn-success">Activar</button>
                           <button id="btn-desactivar" type="button" class="btn btn-secondary" >Desactivar</button>
                         </div>
@@ -235,6 +241,9 @@
 <!-- SOCKET-->
 <script src="/socket.io/socket.io.js"></script>
 
+<script src="obd-nivelCombustible-lib.js"></script>
+<script src="obd-nivelCombustible-dev.js"></script>
+
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
@@ -253,8 +262,7 @@
 
 <!-- PACKAGE GOOGLE CHART JS-->
 
-<script src="import-lib-gauge.js"></script>
-<script src="obd-velocidad-dev.js"></script>
+
   
 </body>
 </html>

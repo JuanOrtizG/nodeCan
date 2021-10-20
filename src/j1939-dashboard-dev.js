@@ -4,18 +4,17 @@ const socket = io()
 
   
   //REFERENCIAMOS LOS ELEMENTOS
-  let panel = document.getElementById('panel')
-  let btn_activar = document.getElementById('btn-activar')
-  let btn_desactivar = document.getElementById('btn-desactivar')
-  let textarea = document.getElementById('textarea')
-  let entrada = document.getElementById('entrada')
-
+  let btn_activar     = document.getElementById('btn-activar')
+  let btn_desactivar  = document.getElementById('btn-desactivar')
+  let tabla           = document.getElementById('tablabody')
+  
+  
+  
   btn_activar.addEventListener('click', (event)=>{
     event.preventDefault()
     console.log("click")
-    console.log(entrada.value)
-
-    let senal = "i"+entrada.value+"t"+"z"
+    
+    let senal = "i" + "FF"+"t"+"z"
     //AL HACER CLICK -> EMITIMOS la  SOCKET el codigo para leer datos rpm
     console.log("emitimos: " + senal)
       socket.emit('message', senal)
@@ -31,11 +30,25 @@ const socket = io()
     cnt++
     //textarea.value += cnt+": "+ data.PGN+" "+data.DA+" "+data.SA+" "+data.p+ " Data:"+data.Data+"\n"
 
-    if(data.PGN == "F004"){cnt1++}
-    if(data.PGN == "F003"){cnt2++}
-    if(data.PGN == "FEFC"){cnt3++}
-    if(data.PGN == "FEF2"){cnt4++}
-    textarea.value = "Paquetes:     "+ "F004: "+ cnt1 + "    F003: "+cnt2+"    FEFC: "+cnt3+"    FEF2: "+cnt4+"\n"
+  
+    tabla.innerHTML +=
+    `<tr>
+        <th scope="row">${cnt}</th>
+        <td>${data.PGN}</td>
+        <td>60000</td>
+        <td>${data.DA}</td>
+        <td>${data.SA}</td>
+        <td>${data.Data[0]}</td>
+        <td>${data.Data[1]}</td>
+        <td>${data.Data[2]}</td>
+        <td>${data.Data[3]}</td>
+        <td>${data.Data[4]}</td>
+        <td>${data.Data[5]}</td>
+        <td>${data.Data[6]}</td>
+        <td>${data.Data[7]}</td>
+      </tr>`
+
+    
 
 
 

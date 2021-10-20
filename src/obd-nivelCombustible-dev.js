@@ -9,7 +9,7 @@ let btn_desactivar = document.getElementById('btn-desactivar')
 btn_activar.addEventListener('click', (event)=>{
   event.preventDefault()
   console.log("click")
-  let senal = "i5ctw"
+  let senal = "i2Fty"
   //AL HACER CLICK -> EMITIMOS la  SOCKET el codigo para leer datos rpm
   console.log("emitimos: " + senal)
     socket.emit('message', senal)
@@ -25,7 +25,7 @@ let datos = {
   borders: 0,
   barStrokeWidth: 20,
   minorTicks: 10,
-  majorTicks: [-40,-17,8,33,60,80,110,130,160,180,210],
+  majorTicks: [0,10,20,30,40,50,60,70,80,90,100],
   value: 30,
   units: "°C",
   colorValueBoxShadow: false,
@@ -42,15 +42,18 @@ document.body.appendChild(gauge.options.renderTo)
 document.getElementById('elemento_gauge').appendChild(gauge.options.renderTo)
 
 
-//INICIALIZAMOS EL TERMOMETRO: lo colocamos a -40 como standar
-let inicio = ((100*-40+4000)/250)
+//INICIALIZAMOS EL TERMOMETRO: lo colocamos a 0 como standar
+let inicio = 0
 gauge.update({value: inicio}) //actualizamos el dato
-panel.innerHTML=-40     //imprimimos en pantalla datos del pic
+panel.innerHTML=inicio     //imprimimos en pantalla datos del pic
 
 
 socket.on('lectura',(data)=>{
   console.log(data)
-  let calcular = ((100*data.valor+4000)/250)//conversión de escala termometrica.
+
+  //let calcular = ((100*data.valor+4000)/250)//conversión de escala termometrica.
+  let calcular = data.valor; 
+
   gauge.update({value: calcular}) //actualizamos los datos.
   panel.innerHTML=data.valor      //imprimimos en pantalla datos del pic
 })
