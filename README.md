@@ -25,12 +25,15 @@ _2. Descargamos el archivo principal .ZIP del [software CAN](https://github.com/
 _3. la carpeta "nodeCAN" lleva los siguientes fichero_ 
 
 _la carpeta "nodeCAN" lleva los siguientes ficheros:_
+
+```    
     nodeCAN
      |
      |__src
      |__index.js
      |__package.json
-     
+```
+
 _4. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugins" y "dist" a la carpeta de trabajo "src" que se encuentra en "nodeCAN" quedando de la siguiente forma
 
    nodeCAN
