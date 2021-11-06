@@ -41,7 +41,7 @@ nodeCAN
 │   ├── plugins
 │   ├── dist
 │   ├── css
-|   └── file4
+|   └── img
 |
 ├── index.js
 └── package.json
@@ -62,14 +62,7 @@ _si la opción 5 tiene problemas, podemos instalar cada módulo por separado:_
 >> npm install socket.io@4.1.2
 ```
 _La carpeta principal quedaría:_
-```    
-    nodeCAN
-     |
-     |__node_modules
-     |__src
-     |__index.js
-     |__package.js
- ```
+
  ```
 nodeCAN
 ├── node_modules
