@@ -15,12 +15,12 @@ Debemos tener instalado NODE JS en nuestro sistema operativo: https://nodejs.org
 Debemos en preferencia tener instalado el navegador FIREFOX. 
 ```
 
-### Instalación 🔧
+### Instalación 🔧 
 
-_1. Se debe descargar la librería AdminLTE para tenerla preparada : https://adminlte.io/    https://github.com/ColorlibHQ/AdminLTE/releases/tag/v3.1.0
+_1. Se debe descargar la librería AdminLTE para tenerla preparada : [AdminLTE](https://adminlte.io/)    [AdminLTE-3.1.0](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v3.1.0)
     la versión utilizada es la 3.1.0_
     
-_2. Descargamos el archivo principal .ZIP de https://github.com/JuanOrtizG/nodeCan, lo descomprimimos, cambiamos el nombre a "nodeCAN"._
+_2. Descargamos el archivo principal .ZIP del [software CAN](https://github.com/JuanOrtizG/nodeCan), lo descomprimimos, cambiamos el nombre a "nodeCAN"._
 
 _3. la carpeta "nodeCAN" lleva los siguientes fichero_ 
 
@@ -71,73 +71,27 @@ _6. Accedemos a la carpeta "nodeCAN" desde la consola de comandos y ejecutamos:_
 _7. Abrimos nuestro navegador firefox y escribimos en la dirección:_ 
     localhost:3000
 
-## Ejecutando las pruebas ⚙️
+## Notas 
 
-_Colocamos el módulo inalámbrico Xbee al puerto USB de nuestra computadora_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
+_si al ejecutar el archivo index.js da un aviso de problemas con el puerto, se puede acceder al archivo index.js y modificar el código:_
 ```
-Da un ejemplo
+const port = new SerialPort( 'COM4', {baudRate: 9600} )
 ```
+_quí podemos cambiar el puerto serial: COM1, COM2, COM3 etc._
 
-### Y las pruebas de estilo de codificación ⌨️
 
-_Explica que verifican estas pruebas y por qué_
 
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+* [Visual Studio COde](https://code.visualstudio.com/download) - IDE 
+* [Node JS](https://nodejs.org/es/) - Usado para el Servidor
+* [Express](https://expressjs.com/es/) - Librería para el Servidor
+* [node Puerto serial](https://serialport.io/docs/guide-installation/) - Puerto de comunicación serial
+* [npm]() - Manejador de dependencias
+* [Git](https://git-scm.com/download/win) - Usado para versiones
+* 
 
 
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
 
     
