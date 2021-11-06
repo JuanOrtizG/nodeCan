@@ -35,7 +35,7 @@ _la carpeta "nodeCAN" lleva los siguientes ficheros:_
 ```
 
 _4. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugins" y "dist" a la carpeta de trabajo "src" que se encuentra en "nodeCAN" quedando de la siguiente forma
-
+```
    nodeCAN
      |
      |__src
@@ -48,7 +48,7 @@ _4. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugin
      |
      |__index.js
      |__package.json_
-     
+````     
 _5.  Mediante la consola ingresamos a la ubicación de la carpeta "nodeCAN", dentro de ella ejecutamos:_
 ```
 npm install
