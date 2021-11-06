@@ -26,29 +26,26 @@ _3. la carpeta "nodeCAN" lleva los siguientes fichero_
 
 _la carpeta "nodeCAN" lleva los siguientes ficheros:_
 
-```    
-    nodeCAN
-     |
-     |__src
-     |__index.js
-     |__package.json
+```
+nodeCAN
+├── src
+├── index.js
+└── package.json
 ```
 
 _4. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugins" y "dist" a la carpeta de trabajo "src" que se encuentra en "nodeCAN" quedando de la siguiente forma
+    
 ```
-   nodeCAN
-     |
-     |__src
-     |     |
-     |     |__plugins
-     |     |__dist
-     |     |__css
-     |     |__img
-     |   
-     |
-     |__index.js
-     |__package.json_
-````     
+nodeCAN
+├── src
+│   ├── plugins
+│   ├── dist
+│   ├── css
+|   └── file4
+|
+├── index.js
+└── package.json
+```
 _5.  Mediante la consola ingresamos a la ubicación de la carpeta "nodeCAN", dentro de ella ejecutamos:_
 ```
 npm install
@@ -72,6 +69,13 @@ _La carpeta principal quedaría:_
      |__src
      |__index.js
      |__package.js
+ ```
+ ```
+nodeCAN
+├── node_modules
+├── src   
+├── index.js
+└── package.js
  ```
  _En donde node_modules es la carpeta contenedora de los módulos instalados_
  
