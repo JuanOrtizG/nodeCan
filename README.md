@@ -64,11 +64,20 @@ _si la opción 5 tiene problemas, podemos instalar cada módulo por separado:_
 >> npm install serialport@9.2.0
 >> npm install socket.io@4.1.2
 ```
-
+_La carpeta principal quedaría:_
+```    
+    nodeCAN
+     |
+     |__node_modules
+     |__src
+     |__index.js
+     |__package.js
+ ```
+ _En donde node_modules es la carpeta contenedora de los módulos instalados_
 _6. Accedemos a la carpeta "nodeCAN" desde la consola de comandos y ejecutamos:_
 
  ```
- node index.js_
+ node index.js
  ```
     
 _7. Abrimos nuestro navegador firefox y escribimos en la dirección:_ 
