@@ -74,6 +74,7 @@ _La carpeta principal quedaría:_
      |__package.js
  ```
  _En donde node_modules es la carpeta contenedora de los módulos instalados_
+ 
 _6. Accedemos a la carpeta "nodeCAN" desde la consola de comandos y ejecutamos:_
 
  ```
