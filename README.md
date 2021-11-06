@@ -6,15 +6,13 @@ _Software web para la visualización de datos vehiculares con sistemas OBD II y 
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
-
 ### Pre-requisitos 📋
 
 _Necesitamos algunas herramientas instaladas en nuestro computador para poder desplegar el sistema_
 
 ```
 Debemos tener instalado NODE JS en nuestro sistema operativo: https://nodejs.org/es/
+Debemos en preferencia tener instalado el navegador FIREFOX. 
 ```
 
 ### Instalación 🔧
@@ -22,12 +20,9 @@ Debemos tener instalado NODE JS en nuestro sistema operativo: https://nodejs.org
 _1. Se debe descargar la librería AdminLTE para tenerla preparada : https://adminlte.io/    https://github.com/ColorlibHQ/AdminLTE/releases/tag/v3.1.0
     la versión utilizada es la 3.1.0_
     
-_2. Se debe descargar la librería AdminLTE para tenerla preparada : https://adminlte.io/    https://github.com/ColorlibHQ/AdminLTE/releases/tag/v3.1.0
-    la versión utilizada es la 3.1.0_
-    
-_3. Descargamos el archivo principal .ZIP de https://github.com/JuanOrtizG/nodeCan, lo descomprimimos, cambiamos el nombre a "nodeCAN"._
+_2. Descargamos el archivo principal .ZIP de https://github.com/JuanOrtizG/nodeCan, lo descomprimimos, cambiamos el nombre a "nodeCAN"._
 
-_4. la carpeta "nodeCAN" lleva los siguientes fichero_ 
+_3. la carpeta "nodeCAN" lleva los siguientes fichero_ 
 
 _la carpeta "nodeCAN" lleva los siguientes ficheros:_
     nodeCAN
@@ -36,7 +31,7 @@ _la carpeta "nodeCAN" lleva los siguientes ficheros:_
      |__index.js
      |__package.json
      
-_5. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugins" y "dist" a la carpeta de trabajo "src" que se encuentra en "nodeCAN" quedando de la siguiente forma
+_4. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugins" y "dist" a la carpeta de trabajo "src" que se encuentra en "nodeCAN" quedando de la siguiente forma
 
    nodeCAN
      |
@@ -51,14 +46,14 @@ _5. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugin
      |__index.js
      |__package.json_
      
-_6.  Mediante la consola ingresamos a la ubicación de la carpeta "nodeCAN", dentro de ella ejecutamos:_
+_5.  Mediante la consola ingresamos a la ubicación de la carpeta "nodeCAN", dentro de ella ejecutamos:_
 ```
 npm install
 ```
         
 _este comando instalará los módulos necesarios para el proyecto, que se encuentran en el archivo package.json._
 
-_si la opción 6 tiene problemas, podemos instalar cada módulo por separado:_ 
+_si la opción 5 tiene problemas, podemos instalar cada módulo por separado:_ 
     
 ```
 >> npm install express@4.17.1
@@ -67,20 +62,18 @@ _si la opción 6 tiene problemas, podemos instalar cada módulo por separado:_
 >> npm install socket.io@4.1.2
 ```
 
-_7. Accedemos a la carpeta "nodeCAN" desde la consola de comandos y ejecutamos:_
+_6. Accedemos a la carpeta "nodeCAN" desde la consola de comandos y ejecutamos:_
 
  ```
  node index.js_
  ```
     
-_8. Abrimos nuestro navegador firefox y escribimos en la dirección:_ 
+_7. Abrimos nuestro navegador firefox y escribimos en la dirección:_ 
     localhost:3000
-    
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+_Colocamos el módulo inalámbrico Xbee al puerto USB de nuestra computadora_
 
 ### Analice las pruebas end-to-end 🔩
 
