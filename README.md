@@ -1,9 +1,5 @@
 # nodeCan
 
-    
-    
-    # Título del Proyecto
-
 _Software web para la visualización de datos vehiculares con sistemas OBD II y J1939, este readme presenta el proceso de instalación en sistemas operativos windows_
 
 ## Comenzando 🚀
@@ -56,27 +52,26 @@ _5. Descomprimimos el archivo AdminLTE-3.1.0.ZIP y copiamos las carpetas "plugin
      |__package.json_
      
 _6.  Mediante la consola ingresamos a la ubicación de la carpeta "nodeCAN", dentro de ella ejecutamos:_
-
-        ```
-        >> npm install
-        ```
+```
+npm install
+```
         
-   _este comando instalará los módulos necesarios para el proyecto, que se encuentran en el archivo package.json._
+_este comando instalará los módulos necesarios para el proyecto, que se encuentran en el archivo package.json._
 
-   _si la opción 6 tiene problemas, podemos instalar cada módulo por separado:_ 
+_si la opción 6 tiene problemas, podemos instalar cada módulo por separado:_ 
     
-    ```
-    >> npm install express@4.17.1
-    >> npm install mysql@2.18.1
-    >> npm install serialport@9.2.0
-    >> npm install socket.io@4.1.2
-    ```
+```
+>> npm install express@4.17.1
+>> npm install mysql@2.18.1
+>> npm install serialport@9.2.0
+>> npm install socket.io@4.1.2
+```
 
 _7. Accedemos a la carpeta "nodeCAN" desde la consola de comandos y ejecutamos:_
 
-    ```
-    >> node index.js_
-    ```
+ ```
+ node index.js_
+ ```
     
 _8. Abrimos nuestro navegador firefox y escribimos en la dirección:_ 
     localhost:3000
